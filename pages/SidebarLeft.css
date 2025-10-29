@@ -1,0 +1,170 @@
+.Sidebar_body {
+    width: 25%;
+    z-index: 1;
+    background-color: #fdf3e6;
+    border-radius: 15px;
+    padding: 40px 40px;
+    margin: 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.Sidebar {
+    display: flex;
+    flex-direction: column;
+}
+
+.Sidebar h2, .Sidebar p {
+    margin: 0;
+}
+
+.Sidebar svg{
+    height: 8%;
+}
+
+.Sidebar .linkToPages {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: flex-start;
+}
+.Sidebar .linkToPages div {
+    display: inline-flex;
+    width: 80%;
+    align-items: center;
+    margin: 0;
+}
+
+.Sidebar .linkToPages div p {
+    background-color: floralwhite;
+    border-radius: 10px;
+    margin: 0.4rem 0;
+    padding:10px;
+    width: 100%;
+}
+
+hr.hr_horizontal {
+    border: 2px solid #e2c8be;
+    width: 30px;
+    margin-left: -2px;
+
+}
+.reloadButton {
+    height:30%;
+    width: 100%;
+    background-color: floralwhite;
+    padding:10px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+}
+
+.reloadButton label{
+    font-size: large;
+}
+
+.reloadButton svg {
+    height: 50%;
+    margin-left: 20px;
+}
+
+.LinkToInstruction {
+    padding: 10px;
+    background-color: floralwhite;
+    border-radius: 15px;
+    text-align: center;
+}
+.LinkToInstruction p {
+    font-size: 1rem;
+    font-weight: normal;
+}
+
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+.languageToggle {
+    display: inline-flex;
+    align-items: center;
+}
+
+.SidebarFooter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.linkToPages_parentBody {
+    display: inline-flex;
+}
+
+.linkToPages_parentBody .hr_border {
+    border-right: 3px solid #e2c8be;
+    height: 83.5%;
+    width: 3px;
+}

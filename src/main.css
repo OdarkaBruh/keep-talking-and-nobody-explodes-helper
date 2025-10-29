@@ -1,0 +1,31 @@
+#root {
+    display: flex;
+    flex-direction: row;
+    width:100%;
+    padding: 10px;
+    background-color: #FFFAF0;
+    height: fit-content;
+}
+
+html, body {
+    margin: 0;
+    height: 100%;
+}
+
+.SVG {
+    height: 50%;
+    z-index: 3;
+}
+svg {
+    min-height: 40px;
+    height: 100%;
+    max-height: 100px;
+}
+
+h1, h2, h3, h4, h5, h6, p, label, ul, ol, li, dl, dt, dd {
+    font-size: 1.2rem;
+    font-family: monospace;
+    font-weight: bold;
+    margin: 1rem;
+    color: #551818;
+}

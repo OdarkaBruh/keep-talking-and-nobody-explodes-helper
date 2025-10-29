@@ -1,0 +1,88 @@
+.Wires > section > .SVG {
+    position: relative;
+    left: 45%;
+    margin-top: 1rem;
+    margin-bottom: -1.5rem;
+    height: 4.2rem;
+}
+
+#wireSvg_Red{
+    fill: #B01A24;
+}
+
+#wireSvg_Blue{
+    fill: rgba(52, 99, 238, 1);
+}
+
+#wireSvg_White{
+    fill: #fffbf8;
+}
+
+.Wire_body {
+    width: 70%;
+    margin: 10px;
+
+    background-color: #FDF4E7;
+    border-radius: 5%;
+
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    position: relative;
+
+}
+
+.Wires {
+    display: flex;
+    flex-direction: column;
+    width:90%;
+}
+
+.Wires section{
+    width:100%;
+    height: 100%;
+}
+
+.SeparateWire{
+    padding: 25px 20px 15px 20px;
+    display: inline-flex;
+    justify-content: flex-start;
+    width: 100%;
+    z-index: 1;
+
+    background-color: antiquewhite;
+    border-radius: 20px;
+}
+
+.SvgHorizontal {
+    display: flex;
+    flex-direction: column;
+    margin: 0 0.5rem;
+    width: 100%;
+    align-items: center;
+}
+
+.SvgHorizontal .SVG{
+    width: 100%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+}
+
+.WireToggles{
+    display: inline-flex;
+    width: 24%;
+    justify-content: center;
+    align-items: stretch;
+    align-content: center;
+    height: 100%;
+}
+
+.WireToggles h4{
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: normal;
+    height: 100%;
+    display: flex;
+    align-items: center
+}

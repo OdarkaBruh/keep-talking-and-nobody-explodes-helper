@@ -1,0 +1,42 @@
+.resultDiv_body .hr_border {
+    border:0;
+    border-left: 3px solid #fffaf0;
+    height:120%;
+    min-height: 30px;
+}
+.resultDiv_body {
+    display: inline-flex;
+    width: 70%;
+    margin-left: 2%;
+    justify-content: center;
+    padding: 10px;
+
+    align-items: center;
+}
+
+.resultDiv {
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+
+    background-color: white;
+    border-radius: 20px;
+    width: 80%;
+    min-width: 100px;
+
+    height: 100%;
+}
+
+.resultDiv h3 {
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+
+
+.resultDiv_body .SVG {
+    margin: 0 4%;
+    height: 40%;
+}
+
