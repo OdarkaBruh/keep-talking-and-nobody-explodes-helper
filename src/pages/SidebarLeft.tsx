@@ -6,7 +6,7 @@ export default function SidebarLeft(){
             <div className='Sidebar'>
                 <h2>Wire Game</h2>
                 <div className='LinkToInstruction'>
-                    <p>Click here to go to instruction</p>
+                    <p><a href='https://www.bombmanual.com/uk/web/index.html'>Click here to go to instruction</a></p>
                 </div>
                 <label>Pages: </label>
                 <div className='linkToPages_parentBody'>

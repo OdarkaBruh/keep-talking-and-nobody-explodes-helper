@@ -3,12 +3,15 @@
     z-index: 1;
     background-color: #fdf3e6;
     border-radius: 15px;
-    padding: 40px 40px;
-    margin: 10px;
+    margin-right: 10px;
 
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+
+.Sidebar_body > div {
+    margin: 40px 40px;
 }
 
 .Sidebar {
@@ -106,7 +109,7 @@ hr.hr_horizontal {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #ccc;
+    background-color: #f1d7c2;
     -webkit-transition: .4s;
     transition: .4s;
 }
@@ -118,17 +121,21 @@ hr.hr_horizontal {
     width: 26px;
     left: 4px;
     bottom: 4px;
-    background-color: white;
+    background-color: #c27665;
     -webkit-transition: .4s;
     transition: .4s;
 }
 
 input:checked + .slider {
-    background-color: #2196F3;
+    background-color: #e6ac9f;
 }
 
 input:focus + .slider {
-    box-shadow: 0 0 1px #2196F3;
+    box-shadow: 0 0 1px #e6ac9f;
+}
+
+input:checked + .slider:before {
+    background-color: #ffff;
 }
 
 input:checked + .slider:before {

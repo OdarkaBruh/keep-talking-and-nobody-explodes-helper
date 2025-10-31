@@ -1,6 +1,6 @@
 import './CutResult.css'
 import React, {useContext} from "react";
-import {WireContext} from "../pages/WiresHorizontal.tsx";
+import {WireContext} from "../pages/WiresVertical.tsx";
 
 interface  Result {
     color: string;

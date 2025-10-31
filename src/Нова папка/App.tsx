@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 
-import WiresHorizontal from "./pages/WiresHorizontal.tsx"
+import WiresHorizontal from "./pages/WiresVertical.tsx"
 import SidebarLeft from "./pages/SidebarLeft.tsx";
 
 function App() {

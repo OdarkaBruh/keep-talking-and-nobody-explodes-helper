@@ -1,5 +1,5 @@
 import React, { useState, useContext } from 'react';
-import  {WireContext} from "../pages/WiresHorizontal.tsx";
+import  {WireContext} from "../pages/WiresVertical.tsx";
 import ButtonsTemplate from "./ButtonsTemplate.tsx";
 
 function ToggleButtons({whichWire}: {whichWire: string}) {

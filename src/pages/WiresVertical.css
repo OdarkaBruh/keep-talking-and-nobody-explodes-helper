@@ -3,7 +3,33 @@
     left: 45%;
     margin-top: 1rem;
     margin-bottom: -1.5rem;
-    height: 4.2rem;
+    height: 3.4rem;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wireSvg {
+    z-index: 2;
+}
+
+#wireSvg_DarkRed, #wireSvg_DarkBlue, #wireSvg_DarkWhite {
+    position: absolute;
+    height: 3.8rem;
+    z-index: 1;
+}
+
+#wireSvg_DarkRed {
+    fill: #650007;
+}
+
+#wireSvg_DarkBlue {
+    fill: rgb(13, 49, 159);
+}
+
+#wireSvg_DarkWhite {
+    fill: rgb(236 219 197);
 }
 
 #wireSvg_Red{
@@ -20,8 +46,7 @@
 
 .Wire_body {
     width: 70%;
-    margin: 10px;
-    padding: 10px;
+    margin-left: 10px;
     height: fit-content;
 
     background-color: #FDF4E7;
@@ -34,10 +59,17 @@
 
 }
 
+.Wire_body > div {
+    margin: 20px;
+}
+
 .Wires {
     display: flex;
     flex-direction: column;
     width:90%;
+    align-items: center;
+
+    height: 100%;
 }
 
 .Wires section{
@@ -54,6 +86,8 @@
 
     background-color: antiquewhite;
     border-radius: 20px;
+
+    margin-top: -2rem;
 }
 
 .SvgHorizontal {
@@ -86,5 +120,34 @@
     font-weight: normal;
     height: 100%;
     display: flex;
-    align-items: center
+    align-items: center;
+    margin: 0;
+}
+
+.WiresNote {
+    margin-top: 1rem;
+    padding: 10px;
+    background-color: antiquewhite;
+    opacity: 80%;
+    width: 60% !important;
+    border-radius: 30px;
+}
+.WiresNote p {
+    text-align: center;
+}
+
+#StarToggle_On, #StarToggle_Off{
+    stroke-width: 1.5;
+    stroke-linecap: round;
+}
+#LightToggle_On{
+    fill:#1a1a1a;
+}
+
+#LightToggle_On, #StarToggle_On {
+    stroke: rgb(255 146 20 / 84%);
+    fill: rgb(255 207 85);
+}
+#LightToggle_Off, #StarToggle_Off  {
+    stroke: rgb(138 60 60);
 }
