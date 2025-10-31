@@ -1,10 +1,10 @@
-.resultDiv_body .hr_border {
+.result__parent .hr--vertical {
     border:0;
     border-left: 3px solid #fffaf0;
     height:120%;
     min-height: 30px;
 }
-.resultDiv_body {
+.result__parent {
     display: inline-flex;
     width: 70%;
     margin-left: 2%;
@@ -35,8 +35,19 @@
 
 
 
-.resultDiv_body .SVG {
+.result__parent .SVG {
     margin: 0 4%;
     height: 40%;
 }
 
+.no-stroke-only-fill{
+    stroke-width: 0 !important;
+    fill: #8a3c3c !important;
+}
+
+.result__svg {
+    stroke: #8a3c3c;
+    fill: none;
+    stroke-width: 2;
+    stroke-linecap: round;
+}

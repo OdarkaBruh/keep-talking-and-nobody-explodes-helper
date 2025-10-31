@@ -1,5 +1,5 @@
 import './WiresHorizontal.css';
-import CutResult from "../sharedComponents/CutResult.tsx";
+import CutResult from "../sharedComponents/ResultOfWire.tsx";
 import ToggleButtons from "../sharedComponents/ToggleButtons.tsx";
 import {createContext, useState} from "react";
 

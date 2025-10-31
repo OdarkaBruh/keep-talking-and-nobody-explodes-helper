@@ -1,0 +1,90 @@
+.wires > section > .SVG {
+    position: relative;
+    left: 45%;
+    margin-top: 1rem;
+    margin-bottom: -1.5rem;
+    height: 3.4rem;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.top-wire-color-svg {
+    z-index: 2;
+}
+
+#top-wire-color-svg--red--dark, #top-wire-color-svg--blue--dark, #top-wire-color-svg--white--dark {
+    position: absolute;
+    height: 3.8rem;
+    z-index: 1;
+}
+
+#top-wire-color-svg--red--dark {
+    fill: #650007;
+}
+
+#top-wire-color-svg--blue--dark {
+    fill: rgb(13, 49, 159);
+}
+
+#top-wire-color-svg--white--dark {
+    fill: rgb(236 219 197);
+}
+
+#top-wire-color-svg--red{
+    fill: #B01A24;
+}
+
+#top-wire-color-svg--blue{
+    fill: rgba(52, 99, 238, 1);
+}
+
+#top-wire-color-svg--white{
+    fill: #fffbf8;
+}
+
+.wires__body {
+    width: 70%;
+    margin-left: 10px;
+    height: fit-content;
+
+    background-color: #FDF4E7;
+    border-radius: 5%;
+
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    position: relative;
+
+}
+
+.wires__body > div {
+    margin: 20px;
+}
+
+.wires {
+    display: flex;
+    flex-direction: column;
+    width:90%;
+    align-items: center;
+
+    height: 100%;
+}
+
+.wires section{
+    width:100%;
+    height: 100%;
+}
+
+.wires__body__note {
+    margin-top: 1rem;
+    padding: 10px;
+    background-color: antiquewhite;
+    opacity: 80%;
+    width: 60% !important;
+    border-radius: 30px;
+}
+.wires__body__note p {
+    text-align: center;
+}

@@ -1,0 +1,69 @@
+/* Main body for each separate wire */
+.wire{
+    padding: 25px 20px 15px 20px;
+    display: inline-flex;
+    justify-content: flex-start;
+    width: 100%;
+    z-index: 1;
+
+    background-color: antiquewhite;
+    border-radius: 20px;
+
+    margin-top: -2rem;
+}
+
+/* ============================ Toggles */
+.wire--light-and-star-toggles{
+    display: inline-flex;
+    width: 24%;
+    justify-content: center;
+    align-items: stretch;
+    align-content: center;
+    height: 100%;
+}
+
+.wire--light-and-star-toggles h4{
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: normal;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+
+/* label and svg vertical alligment */
+.toggle__body--vertical {
+    display: flex;
+    flex-direction: column;
+    margin: 0 0.5rem;
+    width: 100%;
+    align-items: center;
+}
+
+.toggle__body--vertical .SVG{
+    width: 100%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+}
+
+/* Toggles - styles for each one */
+#toggle-star--on, #toggle-star--off{
+    stroke-width: 1.5;
+    stroke-linecap: round;
+}
+
+#toggle-light--on{
+    fill:#1a1a1a;
+}
+
+/* shining effect */
+#toggle-light--on, #toggle-star--on {
+    stroke: rgb(255 146 20 / 84%);
+    fill: rgb(255 207 85);
+}
+
+#toggle-light--off, #toggle-star--off {
+    stroke: rgb(138 60 60);
+}

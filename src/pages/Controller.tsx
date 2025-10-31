@@ -1,17 +1,17 @@
 import {createContext, useState} from "react";
-import './index.css'
-import './main.css'
+import './CSS/index.css'
+import './CSS/main.css'
 import WiresVertical from "./WiresVertical.tsx"
-import SidebarLeft from "./SidebarLeft.tsx";
+import SidebarLeft from "../sharedComponents/WiresVertical/SidebarLeft.tsx";
 
 export const PageContext = createContext();
 
 function Controller() {
-    const [page, setPage] = useState('WiresVertical');
+    const [page, setPage] = useState('wiresVertical');
 
     return (<>
             <SidebarLeft />
-            {page === 'WiresVertical' ? <WiresVertical /> : null}
+            <WiresVertical />
         </>
     )
 }
