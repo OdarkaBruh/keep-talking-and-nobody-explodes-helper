@@ -3,21 +3,26 @@ import '../sharedComponents/WiresVertical/CSS/WiresSeparate_Toggles.css';
 import ResultOfWire from "../sharedComponents/WiresVertical/ResultOfWire.tsx";
 import ToggleButtons from "../sharedComponents/WiresVertical/ToggleButtons.tsx";
 import {createContext, useState} from "react";
+import {LanguageContext} from "./Controller.tsx";
+import {textNoteAboutCuttingWires} from "../sharedComponents/LanguageController.tsx";
 
-
+let allIds : number = 0;
 class Wire {
 
     color : string = '';
     light : boolean = false;
     star : boolean  = false;
+    id : number = 0;
+
 
     constructor(c:string) {
         this.color = c;
+        this.id = allIds;
+        allIds +=1;
     }
 }
 
 export const WireContext = createContext();
-
 
 function SeparateWires({wire}){
 
@@ -55,6 +60,8 @@ export function reloadWiresCollection() {
 
 function WiresVertical(){
     createWiresCollection();
+    const[key,setKey] = useState(0);
+
 return (
         <div className='wires__body'>
             <WireContext.Provider value={wiresCollection}>
@@ -64,11 +71,12 @@ return (
                     </>)})}
                     <section className='wires__body__note'>
                         <p>
-                            Якщо відповідь на питання "Так" - ріжте провід.
+                            {textNoteAboutCuttingWires()}
                         </p>
                     </section>
                 </div>
             </WireContext.Provider>
+
         </div>
     )
 }
