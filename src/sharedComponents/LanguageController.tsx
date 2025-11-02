@@ -1,56 +1,59 @@
 let language:string = 'Ukrainian'; //or "Ukrainian"
+let languageIndex:number = 0;
+// 0 for Ukrainian, 1 for English
 
-const toggleStar_UA : string[] = ["Зірка", "Нема зірки"];
-const toggleLight_UA : string[] = ["Світло", "Нема світла"];
+const reloadButton : string[] = ["Перезагрузити","Reload"];
 
-const toggleStar_ENG : string[] = ["Star", "No star"];
-const toggleLight_ENG : string[] = ["Light", "No light"];
+const toggleStar : string[][] = [["Зірка", "Нема зірки"],["Star", "No star"]];
+const toggleLight : string[][] = [["Світло", "Нема світла"], ["Light", "No light"]];
 
-const cutResult_UA : string[] = ["Ріжте", "Не ріжте", "2+ елементи живлення?", 'Остання цифра серійного номера парна?', "Є паралельний порт?" ];
-const cutResult_ENG  : string[] = ["Cut", "Don't cut", "Does it have 2+ batteries?", "Is the last digit of the serial number even?", "Does it have a parallel port?"]
+const cutResult : string[][] = [
+    ["Ріжте", "Не ріжте", "2+ елементи живлення?", 'Остання цифра серійного номера парна?', "Є паралельний порт?" ],
+    ["Cut", "Don't cut", "Does it have 2+ batteries?", "Is the last digit of the serial number even?", "Does it have a parallel port?"]];
 
-const noteAboutCuttingWires_UA : string = "Якщо відповідь на питання \"Так\" - ріжте провід.";
-const noteAboutCuttingWires_ENG : string = "If the answer to the question is \"Yes\", cut the wire.";
+const noteAboutCuttingWires : string[] = [
+    "Якщо відповідь на питання \"Так\" - ріжте провід.",
+    "If the answer to the question is \"Yes\", cut the wire."];
 
-const linkToInstruction_ENG : string = "Click here to go to the original instructions.";
-const linkToInstruction_UA : string = "Натисніть тут, щоб перейти до оригінальної інструкції.";
-
+const linkToInstruction : string[] =
+    ["Натисніть тут, щоб перейти до оригінальної інструкції.",
+        "Click here to go to the original instructions."];
 
 export function toggleLanguage(){
-    if (language==='English') language=("Ukrainian");
-    else language=("English");
+    if (language==='English') {
+        language = ("Ukrainian")
+        languageIndex = 0;
+    }
+    else
+    {
+        language = ("English");
+        languageIndex = 1;
+    }
+}
+
+export function textReloadButton(){
+    return reloadButton[languageIndex];
 }
 
 /* =============  WiresVertical.tsx and it's children ======================*/
 export function textToggleStar(index){
-    if (language == 'English'){
-        return toggleStar_ENG[index];
-    }
-    else return toggleStar_UA[index];
+    return toggleStar[languageIndex][index];
 }
 
 export function textToggleLight(index){
-    if (language == 'English'){
-        return toggleLight_ENG[index];
-    }
-    else return toggleLight_UA[index];
+    return toggleLight[languageIndex][index];
 }
 
 export function textCutResult(index){
-    if (language == 'English'){
-        return cutResult_ENG[index];
-    }
-    else return cutResult_UA[index];
+    return cutResult[languageIndex][index];
 }
 
 export function textNoteAboutCuttingWires() {
-    if (language == 'English') return noteAboutCuttingWires_ENG;
-    else return noteAboutCuttingWires_UA;
-
+    return noteAboutCuttingWires[languageIndex];
 }
 
 export function textLinkToInstruction() {
-    if (language == 'English') return (<a href='https://www.bombmanual.com/web/index.html'>{linkToInstruction_ENG}</a>);
-    else return (<a href='https://www.bombmanual.com/uk/web/index.html'>{linkToInstruction_UA}</a>);
+    if (languageIndex === 1) return (<a href='https://www.bombmanual.com/web/index.html'>{linkToInstruction[languageIndex]}</a>);
+    else return (<a href='https://www.bombmanual.com/uk/web/index.html'>{linkToInstruction[languageIndex]}</a>);
 
 }
