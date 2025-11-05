@@ -4,7 +4,7 @@ import ResultOfWire from "../sharedComponents/WiresVertical/ResultOfWire.tsx";
 import ToggleButtons from "../sharedComponents/WiresVertical/ToggleButtons.tsx";
 import {createContext, useState} from "react";
 import {LanguageContext} from "./Controller.tsx";
-import {textNoteAboutCuttingWires} from "../sharedComponents/LanguageController.tsx";
+import {textNoteAboutCuttingWires} from "../sharedComponents/LanguageController/LanguageController.tsx";
 
 let allIds : number = 0;
 class Wire {
@@ -27,10 +27,10 @@ export const WireContext = createContext();
 function SeparateWires({wire}){
 
     return(
-        <section>
+        <section className='top-svg'>
             <div className='SVG'>
                 <svg className='top-wire-color-svg' id={'top-wire-color-svg--' + wire.color} viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier"></g><g id="SVGRepo_tracerCarrier"></g><g id="SVGRepo_iconCarrier"> <circle cx="8" cy="8" r="8"></circle> </g></svg>
-                <svg className='top-wire-color-svg' id={'top-wire-color-svg--' + wire.color + '--dark'} viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier"></g><g id="SVGRepo_tracerCarrier"></g><g id="SVGRepo_iconCarrier"> <circle cx="8" cy="8" r="8"></circle> </g></svg>
+                <svg className='top-wire-color-svg--dark' id={'top-wire-color-svg--' + wire.color + '--dark'} viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier"></g><g id="SVGRepo_tracerCarrier"></g><g id="SVGRepo_iconCarrier"> <circle cx="8" cy="8" r="8"></circle> </g></svg>
             </div>
             <div className='wire'>
                 <ToggleButtons wire = {wire}/>
@@ -43,8 +43,10 @@ function SeparateWires({wire}){
 let wiresCollection = [];
 
 function createWiresCollection(){
-    const colors = ['red', 'white', 'blue'];
+    allIds = 0;
     wiresCollection = [];
+    const colors = ['red', 'white', 'blue'];
+    
     for (let i = 0; i < colors.length; i++) {
         console.log(colors[i]);
         const [c, setC] = useState(new Wire(colors[i]));
@@ -58,7 +60,7 @@ export function reloadWiresCollection() {
     }
 }
 
-function WiresVertical(){
+function WireVertical(){
     createWiresCollection();
     const[key,setKey] = useState(0);
 
@@ -81,4 +83,4 @@ return (
     )
 }
 
-export default WiresVertical;
+export default WireVertical;

@@ -1,5 +1,5 @@
 let language:string = 'Ukrainian'; //or "Ukrainian"
-let languageIndex:number = 0;
+export let languageIndex:number = 0;
 // 0 for Ukrainian, 1 for English
 
 const reloadButton : string[] = ["Перезагрузити","Reload"];
@@ -35,7 +35,7 @@ export function textReloadButton(){
     return reloadButton[languageIndex];
 }
 
-/* =============  WiresVertical.tsx and it's children ======================*/
+/* =============  WireVertical.tsx and it's children ======================*/
 export function textToggleStar(index){
     return toggleStar[languageIndex][index];
 }
@@ -53,7 +53,6 @@ export function textNoteAboutCuttingWires() {
 }
 
 export function textLinkToInstruction() {
-    if (languageIndex === 1) return (<a href='https://www.bombmanual.com/web/index.html'>{linkToInstruction[languageIndex]}</a>);
-    else return (<a href='https://www.bombmanual.com/uk/web/index.html'>{linkToInstruction[languageIndex]}</a>);
-
+    if (languageIndex === 1) return (<a href='https://www.bombmanual.com/web/index.html' target="_blank">{linkToInstruction[languageIndex]}</a>);
+    else return (<a href='https://www.bombmanual.com/uk/web/index.html' target="_blank">{linkToInstruction[languageIndex]}</a>);
 }

@@ -1,13 +1,13 @@
 import {createContext, useContext, useState} from "react";
-import {WireContext} from '../../pages/WiresVertical'
+import {WireContext} from '../../pages/WireVertical.tsx'
 
-import {textToggleLight, textToggleStar} from '../LanguageController.tsx'
+import {textToggleLight, textToggleStar} from '../LanguageController/LanguageController.tsx'
 
 export default function ToggleButtons({wire}) {
     const wiresCollection = useContext(WireContext);
 
 
-
+    console.log(wire);
     const setWire = wiresCollection[wire.id][1];
     return(
       <>

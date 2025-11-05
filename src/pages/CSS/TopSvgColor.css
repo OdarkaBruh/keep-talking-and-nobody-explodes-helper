@@ -1,0 +1,46 @@
+
+.top-wire-color-svg {
+    z-index: 2;
+}
+
+.top-wire-color-svg--dark {
+    position: absolute;
+    height: 3.9rem;
+    z-index: 1;
+}
+
+#top-wire-color-svg--red--dark {
+    fill: #650007;
+}
+
+#top-wire-color-svg--blue--dark {
+    fill: rgb(13, 49, 159);
+}
+
+#top-wire-color-svg--white--dark {
+    fill: rgb(236 219 197);
+}
+
+#top-wire-color-svg--red{
+    fill: #B01A24;
+}
+
+#top-wire-color-svg--blue{
+    fill: rgba(52, 99, 238, 1);
+}
+
+#top-wire-color-svg--white{
+    fill: #fffbf8;
+}
+
+#top-wire-color-svg--black{
+    fill: #232323;
+}
+
+.SVG {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 3.4rem;
+    width: 100%;
+}

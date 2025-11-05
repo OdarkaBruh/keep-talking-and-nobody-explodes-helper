@@ -1,5 +1,5 @@
 import './CSS/WiresSeparate_Result.css'
-import {textCutResult} from '../LanguageController.tsx'
+import {textCutResult} from '../LanguageController/LanguageController.tsx'
 
 interface  Result {
     color: string;

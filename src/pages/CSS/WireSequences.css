@@ -1,0 +1,94 @@
+.all-tables__main-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.all-tables {
+    display: inline-flex;
+    user-select: none;
+}
+
+.all-tables__slider__parent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.all-tables > div {
+    margin: 10px;
+    padding:20px;
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    border-radius: 20px;
+}
+
+
+table,td,th {
+    border-width: 1px;
+    border-style: solid;
+    border-spacing: 0;
+    border-color: #595959;
+    word-wrap: break-word;
+}
+
+td,th {
+    padding: 10px;
+}
+
+#red-parent__body {
+    background-color: rgba(255, 132, 132, 0.24);
+}
+
+#red-parent__body * {
+    border-color: #e1b8b8;
+}
+
+#red-parent__body .row-clicked--on * {
+    background-color: rgb(255 255 255 / 60%);
+    border-color: rgb(239 200 200 / 60%);
+    color: #cf9b9b;
+}
+
+#blue-parent__body {
+    background-color: rgba(132, 175, 255, 0.24);
+}
+#blue-parent__body * {
+    border-color: #b2bcdc;
+}
+#blue-parent__body .row-clicked--on * {
+    background-color: rgb(255 255 255 / 60%);
+    border-color: rgba(200, 223, 239, 0.6);
+    color: #9bb8cf;
+}
+
+#black-parent__body {
+    background-color: rgba(200, 200, 200, 0.24);
+}
+
+#black-parent__body * {
+    border-color: #bcbbc1;
+}
+
+#black-parent__body .row-clicked--on * {
+    background-color: rgba(255, 255, 255, 0.76);
+    border-color: rgba(205, 207, 228, 0.6);
+    color: #9d9fb8;
+}
+
+#note-on-hover {
+    opacity: 0.5;
+}
+
+#note-on-hover:hover {
+    opacity: 1;
+}
+
+#note-on-hover li, #note-on-hover ul {
+    margin: 0;
+}
+
+#note-on-hover li {
+    font-weight: normal;
+    font-family: sans-serif;
+}

@@ -38,6 +38,7 @@
 .result__parent .SVG {
     margin: 0 4%;
     height: 40%;
+    width: fit-content;
 }
 
 .no-stroke-only-fill{
