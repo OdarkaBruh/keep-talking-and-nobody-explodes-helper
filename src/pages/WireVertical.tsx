@@ -46,7 +46,7 @@ function createWiresCollection(){
     allIds = 0;
     wiresCollection = [];
     const colors = ['red', 'white', 'blue'];
-    
+
     for (let i = 0; i < colors.length; i++) {
         console.log(colors[i]);
         const [c, setC] = useState(new Wire(colors[i]));

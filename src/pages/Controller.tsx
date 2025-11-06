@@ -18,7 +18,7 @@ export const pages = {
 };
 
 function Controller() {
-    const [page, setPage] = useState(pages.WireSequences);
+    const [page, setPage] = useState(pages.MorseCode);
     const [language, setLanguage] = useState("Ukrainian");
 
     function pageController(){
