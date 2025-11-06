@@ -1,5 +1,5 @@
 export const MorseAlphabet_Ukr = new Map<string, string>([
-    ["a", "*-"],
+    ["а", "*-"],
     ["б", "-***"],
     ["в", "*--"],
     ["г", "****"],

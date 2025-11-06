@@ -3,13 +3,14 @@
     flex-direction: row;
     width:95%;
     height: fit-content;
-    padding: 25px;
+    padding: 20px;
     background-color: #FFFAF0;
 }
 
 html, body {
     margin: 0;
     height: 100%;
+    width: 100%;
 }
 
 .SVG {

@@ -1,12 +1,47 @@
 .MorseCode__body {
     width: 100%;
     display: inline-flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;
+    align-items: stretch;
     justify-content: center;
 }
 .MorseCode {
-    width: 80%;
+    margin-top: 10%;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.words-note__parent {
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    padding: 10px;
+    border-radius: 15px;
+    background-color: #f1d7c2;
+    margin-bottom: 20px;
+    max-width: 400px;
+}
+
+.words-note {
+    margin: 0 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.words-note * {
+    margin: 0;
+    padding: 1px 0;
+    font-weight: normal;
+}
+
+.words-note p {
+    font-size: 1rem;
+    opacity: 80%;
 }
 
 .control-buttons {
@@ -26,13 +61,82 @@
     font-size: 150%;
 }
 
-.all-letters {
+.all-letters__body {
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
+    flex-wrap: nowrap;
+    flex-direction: column;
+
+
+    margin-left:15px;
+    width: 13%;
+    padding: 10px;
+    border-radius: 15px;
+    min-height: 50px;
+    max-height: 550px;
+
+    background-color: #fdf3e6;
+}
+
+.all-letters {
+    overflow-y: auto;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+.all-letters--row {
+    margin-bottom: 10px !important;
+    background-color: #f1d7c2;
+    width: 80%;
+    padding: 2px;
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+}
 
-    width: 80%;
+.all-letters--row p {
+    font-size: 0.8rem;
+}
 
+.all-letters--row h3 {
+    font-size: 1rem;
+}
+
+.all-letters * {
+    margin: 0;
+}
+
+.input-field {
+    height: 50px;
+    width: 60%;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #9d9fb8;
+}
+
+.input-note {
+    width: 50%;
+}
+
+/* scroll*/
+.all-letters::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+.all-letters::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px white;
+    border-radius: 10px;
+}
+
+/* Handle */
+.all-letters::-webkit-scrollbar-thumb {
+    background: #f1d7c2;
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+.all-letters::-webkit-scrollbar-thumb:hover {
+    background: #b30000;
 }
