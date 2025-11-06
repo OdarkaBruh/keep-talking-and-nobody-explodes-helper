@@ -7,15 +7,16 @@ import {LanguageContext, pages} from "../pages/Controller.tsx";
 import {textLinkToInstruction, textReloadButton, toggleLanguage} from "./LanguageController/LanguageController.tsx";
 import {useContext} from "react";
 
-export default function SidebarLeft({page, setPage}){
+export default function SidebarLeft({page, setPage, reloadMorse}){
     const [language, setLanguage] = useContext(LanguageContext);
-
 
     function toggleLanguage_Sidebar(){
         if(language === "Ukrainian") setLanguage("English");
         else setLanguage("Ukrainian");
 
         toggleLanguage();
+
+        if (page == pages.MorseCode) reloadMorse();
     }
 
     function reloadController(){
@@ -25,6 +26,10 @@ export default function SidebarLeft({page, setPage}){
         else if (page === pages.WireSequences){
             classListClearTable_AllTables();
         }
+        else if (page === pages.MorseCode) {
+            reloadMorse();
+        }
+
     }
 
     function pageNavigation(page){
