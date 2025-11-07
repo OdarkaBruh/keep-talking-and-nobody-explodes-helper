@@ -8,6 +8,7 @@ import WireSequences from "./WireSequences.tsx";
 import SidebarLeft from "../sharedComponents/SidebarLeft.tsx";
 import MorseCode from "./MorseCode.tsx";
 import {getWords} from "../sharedComponents/MorseCode/MorseCode_Alphabets.tsx";
+import AboutProject from "./AboutProject.tsx";
 
 export const PageContext = createContext();
 export const LanguageContext = createContext();
@@ -17,11 +18,12 @@ export const MorseContext = createContext();
 export const pages = {
     WireSequences: 'WireSequences',
     WireVertical: 'WireVertical',
-    MorseCode: 'MorseCode'
+    MorseCode: 'MorseCode',
+    AboutProject: 'AboutProject'
 };
 
 function Controller() {
-    const [page, setPage] = useState(pages.MorseCode);
+    const [page, setPage] = useState(pages.AboutProject);
     const [language, setLanguage] = useState("Ukrainian");
 
     //Morse Code
@@ -30,12 +32,11 @@ function Controller() {
     const [knownLetters, setKnownLetters] = useState("");
     const [allWords, setAllWords] = useState(Array.from(getWords(), ([key, value]) => ({ key, value })));
 
-    const value = {currentLetterCode, setCurrentLetterCode, letters,setLetters,knownLetters,setKnownLetters, allWords, setAllWords};
-
     function pageController(){
         if (page === pages.WireVertical) {return <WireVertical />}
         else if (page === pages.WireSequences) {return <WireSequences />}
-        else if (page === pages.MorseCode) {return <MorseCode currentLetterCode = {currentLetterCode}/>}
+        else if (page === pages.MorseCode) {return <MorseCode />}
+        else if (page === pages.AboutProject) {return <AboutProject />}
     }
 
     const reloadMorse = () => {

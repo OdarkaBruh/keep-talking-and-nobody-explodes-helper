@@ -1,0 +1,85 @@
+.about-project__parent {
+    width: 100%;
+    justify-items: center;
+    margin-top: 5%;
+}
+
+a, a:visited {
+    color: #551818;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #d12c2c;
+}
+
+strong {
+    font-weight: bold;
+}
+
+h1, h3, p {
+    margin: 2px;
+}
+h3, p {
+    font-weight: normal;
+}
+.about-project-greet {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 90%;
+    padding-left: 20%;
+}
+.about-project-greet--text {
+    width: 50%;
+    padding-left: 20px;
+}
+.about-project-greet img{
+    aspect-ratio: 1/1;
+    max-height: 110px;
+    border: 3px solid #ffffff;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.about-project__parent h3 {
+    font-size: 1rem;
+    opacity: 80%;
+}
+.about-project {
+    margin-top: 20px;
+    width: 70%;
+    padding: 10px;
+}
+.about-project > div {
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.about-project-goal {
+    background-color: #fbe1cbc7;
+}
+
+.about-project-mail {
+    background-color: #fce7d35e;
+}
+.about-project-mail {
+
+}
+
+.about-project  * {
+    font-family: sans-serif;
+}
+h3, p {
+    font-size: 1rem;
+}
+
+.about-project p {
+    font-size: 0.9rem;
+}
+hr {
+    margin: 25px auto;
+    width: 70%;
+    border: 1px solid #e5b9ae96;
+}

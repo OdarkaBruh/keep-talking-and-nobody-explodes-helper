@@ -11,7 +11,7 @@
 }
 
 .Sidebar__body > div {
-    margin: 40px 40px;
+    margin: 20px 20px;
 }
 
 .Sidebar {
@@ -61,32 +61,35 @@ hr.hr--horizontal {
 }
 .reloadButton {
     height:30%;
-    width: 100%;
     background-color: floralwhite;
-    padding:10px;
+    padding:5px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    border-radius: 15px;
+    border-radius: 10px;
 }
 
-.reloadButton label{
-    font-size: large;
+.reloadButton h4{
+    font-size: 1rem;
+    text-align: center;
 }
 
 .reloadButton svg {
-    height: 50%;
-    margin-left: 20px;
+    height: 60%;
+    margin-left: 15px;
+    max-height: 40px;
+    min-height: 10px;
 }
 
 .link-to-instruction {
-    padding: 10px;
+    padding: 5px;
+
     background-color: floralwhite;
     border-radius: 15px;
     text-align: center;
 }
-.link-to-instruction p {
-    font-size: 1rem;
+.link-to-instruction p, .link-to-instruction a {
+    font-size: 0.95rem;
     font-weight: normal;
 }
 
@@ -111,4 +114,16 @@ hr.hr--horizontal {
     border-right: 3px solid #e2c8be;
     height: 83.5%;
     width: 3px;
+}
+
+.about-project-button {
+    padding-top: 20px;
+    width: 100%;
+    text-align: center;
+}
+.about-project-button span{
+    background-color: #fbe1cbc7;
+    font-size: 1rem;
+    padding: 10px;
+    border-radius: 10px;
 }

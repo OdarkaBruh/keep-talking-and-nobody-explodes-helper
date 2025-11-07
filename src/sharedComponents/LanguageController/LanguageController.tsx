@@ -16,8 +16,8 @@ const noteAboutCuttingWires : string[] = [
     "If the answer to the question is \"Yes\", cut the wire."];
 
 const linkToInstruction : string[] =
-    ["Натисніть тут, щоб перейти до оригінальної інструкції.",
-        "Click here to go to the original instructions."];
+    ["Оригінальна інструкція гри",
+        "Original game manual"];
 
 export function toggleLanguage(){
     if (language==='English') {

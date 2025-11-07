@@ -6,6 +6,7 @@ import {LanguageContext, pages} from "../pages/Controller.tsx";
 
 import {textLinkToInstruction, textReloadButton, toggleLanguage} from "./LanguageController/LanguageController.tsx";
 import {useContext} from "react";
+import AboutProject from "../pages/AboutProject.tsx";
 
 export default function SidebarLeft({page, setPage, reloadMorse}){
     const [language, setLanguage] = useContext(LanguageContext);
@@ -55,6 +56,7 @@ export default function SidebarLeft({page, setPage, reloadMorse}){
                         {pageNavigation(pages.MorseCode)}
                     </div>
                 </div>
+                <p className='about-project-button' onClick={()=>setPage(pages.AboutProject)}><span>About Project</span></p>
             </div>
             <div className='sidebar__footer'>
                 <div className='reloadButton' onClick={reloadController}>
