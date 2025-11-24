@@ -5,6 +5,7 @@ import {classListClearTable_AllTables} from "../pages/WireSequences.tsx"
 import {LanguageContext, pages} from "../pages/Controller.tsx";
 
 import {textLinkToInstruction, textReloadButton, toggleLanguage} from "./LanguageController/LanguageController.tsx";
+import {pageLanguage} from "./LanguageController/LanguageController_Sidebar.tsx";
 import {useContext} from "react";
 import AboutProject from "../pages/AboutProject.tsx";
 
@@ -33,10 +34,10 @@ export default function SidebarLeft({page, setPage, reloadMorse}){
 
     }
 
-    function pageNavigation(page){
+    function pageNavigation(page, index){
         return(<div onClick={()=>setPage(page)}>
             <hr className='hr--horizontal'/>
-            <p>{page.replace(/([A-Z])/g, ' $1').trim()}</p>
+            <p>{pageLanguage(index)}</p>
         </div>)
     }
 
@@ -47,16 +48,16 @@ export default function SidebarLeft({page, setPage, reloadMorse}){
                 <div className='link-to-instruction'>
                     <p>{textLinkToInstruction()}</p>
                 </div>
-                <label>Pages: </label>
+                <label>{pageLanguage(0)} </label>
                 <div className='link-to-pages__body'>
                     <div className='hr--vertical' />
                     <div className='link-to-pages'>
-                        {pageNavigation(pages.WireVertical)}
-                        {pageNavigation(pages.WireSequences)}
-                        {pageNavigation(pages.MorseCode)}
+                        {pageNavigation(pages.WireVertical, 1)}
+                        {pageNavigation(pages.WireSequences, 2)}
+                        {pageNavigation(pages.MorseCode, 3)}
                     </div>
                 </div>
-                <p className='about-project-button' onClick={()=>setPage(pages.AboutProject)}><span>About Project</span></p>
+                <p className='about-project-button' onClick={()=>setPage(pages.AboutProject)}><span>{pageLanguage(4)}</span></p>
             </div>
             <div className='sidebar__footer'>
                 <div className='reloadButton' onClick={reloadController}>

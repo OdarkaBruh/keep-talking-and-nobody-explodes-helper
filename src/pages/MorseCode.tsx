@@ -2,6 +2,7 @@ import "./CSS/MorseCode.css"
 import {useContext, useState} from "react";
 import {getAlphabet, getWords} from "../sharedComponents/MorseCode/MorseCode_Alphabets.tsx"
 import {LanguageContext, MorseContext} from "./Controller.tsx";
+import {languageButtons} from "../sharedComponents/LanguageController/LanguageController_MorseCode.tsx";
 
 export default function MorseCode() {
     const context = useContext(MorseContext);
@@ -149,9 +150,9 @@ return (<>
 
                 </div>
                 <div className="control-buttons">
-                    <button onClick={() => finishWord()}>end words</button>
-                    <button onClick={() => removeLastLetter()}>delete last letter</button>
-                    <button onClick={() => removeAllLetters()}>delete all letters</button>
+                    <button onClick={() => finishWord()}>{languageButtons(0)}</button>
+                    <button onClick={() => removeLastLetter()}>{languageButtons(1)}</button>
+                    <button onClick={() => removeAllLetters()}>{languageButtons(2)}</button>
                     </div>
                 < hr />
             </div>

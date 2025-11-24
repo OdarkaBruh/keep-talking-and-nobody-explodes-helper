@@ -131,7 +131,9 @@ export default function WireSequences() {
             <div className='all-tables__main-body'>
                 <div className='all-tables'>
                     {colors.map(function(c:string) {
-                        return tableTemplate(eval("data"+c), c.toLowerCase());
+                        if (c === "Red") return tableTemplate(dataRed, c.toLowerCase());
+                        else if (c === "Blue") return tableTemplate(dataBlue, c.toLowerCase());
+                        else return tableTemplate(dataBlack, c.toLowerCase());
                     })}
                 </div>
                 <div className='all-tables__slider__parent'>
