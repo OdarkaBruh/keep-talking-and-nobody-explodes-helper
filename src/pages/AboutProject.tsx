@@ -7,7 +7,7 @@ export default function AboutProject() {
     return(
         <div className='about-project__parent'>
             <div className='about-project-greet'>
-                <img src='./src/assets/icon.jpg' />
+                <img src='https://avatars.githubusercontent.com/u/128902936?v=4' />
                 <div className='about-project-greet--text'>
                     <h1>Привіт! </h1>
                     <h3>Це мій невеликий проект створений по грі <a href="https://store.steampowered.com/app/341800/Keep_Talking_and_Nobody_Explodes/">Keep Talking and Nobody Explodes.</a></h3>
